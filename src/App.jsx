@@ -22,7 +22,7 @@ function App() {
   ])
   //
   return (
-    <main className="grid w-full h-[100svh] grid-cols-mob content-start py-6">
+    <main className="grid w-full min-h-[100svh] grid-cols-mob content-start py-6">
       <SearchAndSettings />
       <TitleAndSound/>
       <DescriptionAndType/>
