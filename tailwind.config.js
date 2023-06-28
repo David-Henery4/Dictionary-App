@@ -2,6 +2,10 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
+    screens: {
+      smTab: "38.75em",
+      tab: "45em",
+    },
     colors: {
       red: "#FF5252",
       purple: "#A445ED",
@@ -21,6 +25,7 @@ export default {
     },
     gridTemplateColumns:{
       mob: "24px repeat(10,1fr) 24px",
+      tab: "40px repeat(10,1fr) 40px",
     },
     extend: {},
   },

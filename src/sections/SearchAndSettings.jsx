@@ -5,10 +5,10 @@ import {FontSelect, ThemeSelect, SearchInput} from "../components"
 
 const SearchAndSettings = () => {
   return (
-    <section className="w-full col-start-2 col-end-12 mb-6">
-      <div className="flex justify-between items-center mb-6">
+    <section className="w-full col-start-2 col-end-12 mb-6 tab:mb-11">
+      <div className="flex justify-between items-center mb-6 tab:mb-14">
         <Logo />
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center gap-3 smTab:gap-8 tab:gap-14">
           <FontSelect/>
           <ThemeSelect/>
         </div>
