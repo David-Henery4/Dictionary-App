@@ -23,9 +23,12 @@ export default {
       lora: "'Lora', serif",
       inconsolata: "'Inconsolata', monospace",
     },
-    gridTemplateColumns:{
+    gridTemplateColumns: {
       mob: "24px repeat(10,1fr) 24px",
       tab: "40px repeat(10,1fr) 40px",
+    },
+    boxShadow: {
+      selectDropdown: "0px 5px 30px 0px rgba(0, 0, 0, 0.10)",
     },
     extend: {},
   },

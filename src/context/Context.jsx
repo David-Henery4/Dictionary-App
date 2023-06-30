@@ -3,7 +3,11 @@ import { useState, createContext } from "react";
 const AppContext = createContext();
 
 const AppProvider = ({children}) => {
-  const [currFont,setFont] = useState("font-inter");
+  const [currFont, setCurrFont] = useState({
+    id: 1,
+    fontName: "Sans Serif",
+    fontValue: "font-inter",
+  });
   const [fontList, setFontList] = useState([
     {
       id: 1,
@@ -13,15 +17,19 @@ const AppProvider = ({children}) => {
     {
       id: 2,
       fontName: "Serif",
-      fontValue: "lora",
+      fontValue: "font-lora",
     },
     {
       id: 3,
       fontName: "Mono",
-      fontValue: "inconsolata",
+      fontValue: "font-inconsolata",
     },
   ]);
   const [isFontSelectOpen, setIsFontSelectOpen] = useState(false);
+  //
+  const handleSetCurrFont = (id) => {
+    setCurrFont(fontList.find((curr) => curr.id === id))
+  }
   //
   return (
     <AppContext.Provider
@@ -33,7 +41,8 @@ const AppProvider = ({children}) => {
         setFontList,
         //
         currFont,
-        setFont,
+        //
+        handleSetCurrFont,
       }}
     >
       {children}

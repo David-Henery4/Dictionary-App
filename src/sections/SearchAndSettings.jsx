@@ -2,10 +2,9 @@ import {
   Logo,
 } from "../assets/images";
 import {FontSelect, ThemeSelect, SearchInput} from "../components"
-import useGolbal from "../context/useGlobal";
+// import useGolbal from "../context/useGlobal";
 
 const SearchAndSettings = () => {
-  const {} = useGolbal()
   //
   return (
     <section className="w-full col-start-2 col-end-12 mb-6 tab:mb-11">
