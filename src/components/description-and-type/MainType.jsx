@@ -1,9 +1,15 @@
+import useGlobal from "../../context/useGlobal";
 
 
 const MainType = () => {
+  const { currentQueryData } = useGlobal();
+  const {meanings} = currentQueryData
+  //
   return (
     <div className="w-full flex justify-center items-center gap-4 mb-4 tab:mb-10">
-      <h2 className="text-lg font-bold italic tab:text-2xl">noun</h2>
+      <h2 className="text-lg font-bold italic tab:text-2xl">    
+        {meanings[0]?.partOfSpeech}
+      </h2>
       <div className="w-full h-[1px] bg-veryLightGray"></div>
     </div>
   );

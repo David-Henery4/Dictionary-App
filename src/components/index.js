@@ -10,6 +10,8 @@ import Meaning from "./description-and-type/Meaning";
 import MainType from "./description-and-type/MainType";
 import SecondaryType from "./description-and-type/SecondaryType";
 import Synonyms from "./description-and-type/Synonyms";
+//
+import LoadingSpinner from "./loading/LoadingSpinner";
 
 export {
   // Search & settings
@@ -24,5 +26,7 @@ export {
   Meaning,
   SecondaryType,
   Source,
-  Synonyms
+  Synonyms,
+  //
+  LoadingSpinner,
 }

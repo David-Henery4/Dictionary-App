@@ -1,7 +1,9 @@
 import { useState } from "react";
 import {SearchIcon} from "../../assets/images"
+import useGlobal from "../../context/useGlobal";
 
 const SearchInput = () => {
+  const { fetchUserQuery } = useGlobal();
   const [searchValue,setSearchValue] = useState("")
   //
   return (
@@ -16,7 +18,9 @@ const SearchInput = () => {
           setSearchValue(e.target.value);
         }}
       />
-      <SearchIcon className="stroke-purple absolute top-1/2 right-3 -translate-y-1/2 hover:cursor-pointer" />
+      <SearchIcon className="stroke-purple absolute top-1/2 right-3 -translate-y-1/2 hover:cursor-pointer" onClick={() => {
+        fetchUserQuery(searchValue)
+      }}/>
     </div>
   );
 }
