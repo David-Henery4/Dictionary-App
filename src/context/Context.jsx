@@ -44,6 +44,7 @@ const AppProvider = ({ children }) => {
       const res = await axios(
         `https://api.dictionaryapi.dev/api/v2/entries/en/${query}`
       );
+      console.log(res.data)
       setCurrentQueryData(res.data[0])
       setIsLoading(false);
     } catch (error) {
