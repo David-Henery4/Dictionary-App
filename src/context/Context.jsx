@@ -5,7 +5,9 @@ const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
   const [currentQueryData,setCurrentQueryData] = useState({})
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false)
+  const [isError,setIsError] = useState(false)
+  const [errorMsg, setErrorMsg] = useState({})
   //
   const [currFont, setCurrFont] = useState({
     id: 1,
@@ -36,12 +38,20 @@ const AppProvider = ({ children }) => {
   };
   //
   const fetchUserQuery = async (query) => {
-    setIsLoading(true)
-    const res = await axios(
-      `https://api.dictionaryapi.dev/api/v2/entries/en/${query}`
-    );
-    setCurrentQueryData(res.data[0])
-    setIsLoading(false);
+    try {
+      setIsError(false);
+      setIsLoading(true)
+      const res = await axios(
+        `https://api.dictionaryapi.dev/api/v2/entries/en/${query}`
+      );
+      setCurrentQueryData(res.data[0])
+      setIsLoading(false);
+    } catch (error) {
+      console.error(error.message)
+      setErrorMsg(error.response.data);
+      setIsLoading(false)
+      setIsError(true)
+    }
   };
   //
   useState(() => {
@@ -68,6 +78,9 @@ const AppProvider = ({ children }) => {
         //
         currentQueryData,
         setCurrentQueryData,
+        //
+        isError,
+        errorMsg,
       }}
     >
       {children}

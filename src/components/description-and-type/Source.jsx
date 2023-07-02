@@ -1,4 +1,5 @@
 import useGlobal from "../../context/useGlobal";
+import {NewWindowIcon} from "../../assets/images";
 
 const Source = () => {
   const { currentQueryData } = useGlobal();
@@ -9,8 +10,13 @@ const Source = () => {
       <h4 className="text-sm font-normal text-lightGray">Source</h4>
       {sourceUrls?.map((srcUrls,i) => {
         return (
-          <a key={i} href="#" className="break-words text-sm font-normal text-darkGray">
+          <a
+            key={i}
+            href="#"
+            className="break-all  text-sm font-normal text-darkGray inline-flex justify-start items-center gap-4 flex-wrap"
+          >
             {srcUrls}
+            <NewWindowIcon />
           </a>
         );
       }) }
