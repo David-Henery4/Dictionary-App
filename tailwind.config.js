@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: "class",
   content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
     screens: {
@@ -29,6 +30,7 @@ export default {
     },
     boxShadow: {
       selectDropdown: "0px 5px 30px 0px rgba(0, 0, 0, 0.10)",
+      selectDarkDropdown: "0px 5px 30px 0px #A445ED",
     },
     extend: {},
   },

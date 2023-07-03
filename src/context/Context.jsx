@@ -4,6 +4,7 @@ import { useState, createContext } from "react";
 const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
+  const [isThemeToggled, setIsThemeToggled] = useState(false);
   const [currentQueryData,setCurrentQueryData] = useState({})
   const [isLoading, setIsLoading] = useState(false)
   const [isError,setIsError] = useState(false)
@@ -44,7 +45,6 @@ const AppProvider = ({ children }) => {
       const res = await axios(
         `https://api.dictionaryapi.dev/api/v2/entries/en/${query}`
       );
-      console.log(res.data)
       setCurrentQueryData(res.data[0])
       setIsLoading(false);
     } catch (error) {
@@ -82,6 +82,9 @@ const AppProvider = ({ children }) => {
         //
         isError,
         errorMsg,
+        //
+        isThemeToggled,
+        setIsThemeToggled,
       }}
     >
       {children}

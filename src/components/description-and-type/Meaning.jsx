@@ -16,7 +16,7 @@ const Meaning = () => {
               className="list-inside relative before:w-[5px] before:h-[5px] before:absolute before:bg-purple before:rounded-full before:top-3 before:left-0 pl-5"
               key={i}
             >
-              <p className="text-[15px] font-normal leading-[24px] text-darkGray tab:text-lg">
+              <p className="text-[15px] font-normal leading-[24px] text-darkGray dark:text-white tab:text-lg">
                 {mean?.definition}
               </p>
             </li>

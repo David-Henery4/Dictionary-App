@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import {PlayIcon} from "../../assets/images"
+import { PlayIconBackup } from "../../assets/images";
 import useGlobal from "../../context/useGlobal"
 
 const SoundSample = () => {
@@ -17,8 +17,11 @@ const SoundSample = () => {
   }, [currentQueryData])
   //
   return (
-    <div className="w-12 h-12 tab:w-[75px] tab:h-[75px]">
-        <PlayIcon className="w-full h-full" onClick={handlePlayAudio}/>
+    <div className="w-12 h-12 hover:cursor-pointer tab:w-[75px] tab:h-[75px]">
+      <PlayIconBackup
+        className="w-full h-full fill-purple hover:scale-105"
+        onClick={handlePlayAudio}
+      />
     </div>
   );
 }
