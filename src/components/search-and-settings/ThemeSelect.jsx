@@ -1,8 +1,20 @@
+import { useEffect } from "react";
 import { MoonIcon } from "../../assets/images";
 import useGlobal from "../../context/useGlobal";
+import useTheme from "../../theme/useTheme";
 
 const ThemeSelect = () => {
+  const { htmlDoc, handleThemeSelectChange } = useTheme();
   const { isThemeToggled, setIsThemeToggled } = useGlobal();
+  //
+  useEffect(() => {
+    if (htmlDoc.classList.contains("light")){
+      setIsThemeToggled(false)
+    }
+    if (htmlDoc.classList.contains("dark")){
+      setIsThemeToggled(true)
+    }
+  }, [htmlDoc])
   //
   return (
     <div className="flex justify-center items-center gap-3 tab:gap-5">
@@ -12,6 +24,7 @@ const ThemeSelect = () => {
         }`}
         onClick={() => {
           setIsThemeToggled(!isThemeToggled);
+          handleThemeSelectChange()
         }}
       >
         <div
@@ -20,7 +33,9 @@ const ThemeSelect = () => {
           }`}
         ></div>
       </div>
-      <MoonIcon className={`${isThemeToggled ? "stroke-purple" : "stroke-lightGray"}`} />
+      <MoonIcon
+        className={`${isThemeToggled ? "stroke-purple" : "stroke-lightGray"}`}
+      />
     </div>
   );
 };
