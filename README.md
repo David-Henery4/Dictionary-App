@@ -40,8 +40,7 @@ Users are able to:
 ### Links
 
 
-### to be added
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Frontend Mentor solution](https://www.frontendmentor.io/solutions/dictionary-app-tailwind-react-vite-axios-api-cssgrid-flexbox-Rxe8eBYaQ5)
 - Live Site URL: [https://one-word-dictionary.netlify.app](https://one-word-dictionary.netlify.app)
 
 ## My process

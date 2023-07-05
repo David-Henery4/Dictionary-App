@@ -17,6 +17,7 @@ const SearchInput = () => {
   //
   return (
     <div className="w-full relative rounded-2xl overflow-hidden before:absolute before:w-full before:h-full before:rounded-2xl before:hover:border-purple before:hover:border-2 before:pointer-events-none">
+      <label hidden htmlFor="search">Search Input</label>
       <input
         type="text"
         name="search"
