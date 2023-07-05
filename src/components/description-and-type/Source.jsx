@@ -12,8 +12,10 @@ const Source = () => {
         return (
           <a
             key={i}
-            href="#"
+            href={`${srcUrls}`}
             className="break-all  text-sm font-normal text-darkGray inline-flex justify-start items-center gap-4 flex-wrap dark:text-white"
+            target="_blank"
+            rel="noreferrer"
           >
             {srcUrls}
             <NewWindowIcon />
