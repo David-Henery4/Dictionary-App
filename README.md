@@ -42,7 +42,7 @@ Users are able to:
 
 ### to be added
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://one-word-dictionary.netlify.app](https://one-word-dictionary.netlify.app)
 
 ## My process
 
